@@ -1,0 +1,138 @@
+
+
+{
+   "bridge": {        "name": "HomeBridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "126-75-777"
+    },
+
+    "description": "HomeBridge HTTP Status Control",
+
+    "accessories": [ {
+                "accessory": "Http",
+                "name": "Lampe Garage",
+                        "switchHandling": "realtime",
+                                "http_method": "GET",
+                                "on_url":      "http://192.168.1.26:8080/hc_cmd?LIGHT_Garage=1",
+                                "off_url":     "http://192.168.1.26:8080/hc_cmd?LIGHT_Garage=0",
+                        "service": "Light",
+                                "brightnessHandling": "no"
+        },
+         {
+                "accessory": "Http",
+                "name": "Lampe Atelier",
+                        "switchHandling": "realtime",
+                                "http_method": "GET",
+                                "on_url":      "http://192.168.1.26:8080/hc_cmd?LIGHT_Atelier=1",
+                                "off_url":     "http://192.168.1.26:8080/hc_cmd?LIGHT_Atelier=0",
+                        "service": "Light",
+                                "brightnessHandling": "no"
+       } ,
+
+ {
+                "accessory": "Http",
+                "name": "Ampoule Disco",
+                        "switchHandling": "realtime",
+                                "http_method": "GET",
+                                "on_url":      "http://192.168.1.26:8080/hc_cmd?LIGHT_Ampoule_Disco=1",
+                                "off_url":     "http://192.168.1.26:8080/hc_cmd?LIGHT_Ampoule_Disco=0",
+                        "service": "Light",
+                                "brightnessHandling": "no"
+	} ,
+
+	{
+		"accessory": "HttpMultisensor",
+        	"name": "Salon",
+	        "type": "CurrentTemperature",
+	        "url": "http://192.168.1.26:8080/hc_tmp?Salon",
+	        "http_method": "GET",
+	        "debug": true
+	},
+
+	{
+                "accessory": "HttpMultisensor",
+                "name": "Garage",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Garage",
+                "http_method": "GET",
+                "debug": true
+         },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "Victor",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Victor",
+                "http_method": "GET",
+                "debug": true
+         },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "Daphnée",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Daphnee",
+                "http_method": "GET",
+                "debug": true
+         },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "Barnabé",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Barnabé",
+                "http_method": "GET",
+                "debug": true
+         },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "Cuisine",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Cuisine",
+                "http_method": "GET",
+	        "debug": true
+        },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "HomeCinema",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?HomeCinema",
+                "http_method": "GET",
+                "debug": true
+         },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "Parent",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Parent",
+                "http_method": "GET",
+                "debug": true
+         },
+
+        {
+                "accessory": "HttpMultisensor",
+                "name": "Exterieur",
+                "type": "CurrentTemperature",
+                "url": "http://192.168.1.26:8080/hc_tmp?Exterior",
+                "http_method": "GET",
+                "debug": true
+         },
+
+	{
+               "accessory": "Thermostat",
+               "name": "Salon",
+               "apiroute": "http://192.168.1.26:8080/hc_thermostat?Salon",
+               "maxTemp": 25,
+               "minTemp": 15
+           }
+
+
+    ]
+}
+
+
+
