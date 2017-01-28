@@ -4,7 +4,7 @@
    "bridge": {        "name": "HomeBridge",
         "username": "CC:22:3D:E3:CE:30",
         "port": 51826,
-        "pin": "126-75-777"
+        "pin": "153-75-747"
     },
 
     "description": "HomeBridge HTTP Status Control",
@@ -126,9 +126,41 @@
                "accessory": "Thermostat",
                "name": "Salon",
                "apiroute": "http://192.168.1.26:8080/hc_thermostat?Salon",
-               "maxTemp": 25,
+               "maxTemp": 22,
                "minTemp": 15
-           }
+           },
+	{
+               "accessory": "Thermostat",
+               "name": "Cuisine",
+               "apiroute": "http://192.168.1.26:8080/hc_thermostat?Cuisine",
+               "maxTemp": 22,
+               "minTemp": 15
+        },
+
+	 {
+               "accessory": "Thermostat",
+               "name": "Barnabe",
+               "apiroute": "http://192.168.1.26:8080/hc_thermostat?Barnabe",
+               "maxTemp": 22,
+               "minTemp": 15
+        },
+	
+	 {
+               "accessory": "Thermostat",
+               "name": "Daphnee",
+               "apiroute": "http://192.168.1.26:8080/hc_thermostat?Daphnee",
+               "maxTemp": 22,
+               "minTemp": 15
+        },
+	 {
+               "accessory": "Thermostat",
+               "name": "Homecinema",
+               "apiroute": "http://192.168.1.26:8080/hc_thermostat?Homecinema",
+               "maxTemp": 22,
+               "minTemp": 15
+        }
+
+	
 
 
     ]
